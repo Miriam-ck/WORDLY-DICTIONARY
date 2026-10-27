@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WORDLY DICTIONARY</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-slate-100 p-6">
+    <main class="mx-auto max-w-xl">
+        <h1 class="mb-4 text-3xl font-bold text-indigo-700">
+            WORDLY DICTIONARY</h1>
+
+       <form id="search-form" class="mb-4 flex gap-2">
+       <input id="search-input" type="text"
+       aria-label="Word to search" 
+       placeholder="Enter a word..."
+       class="flex-1 rounded border px-3 py-2">
+<button type="submit" aria-label="Search"
+            class="rounded bg-indigo-600 px-4 py-2
+             text-white hover:bg-indigo-700">
+        Search
+        </button>
+        </form>
+
+        <p id="error" role="alert" class="hidden mb-4 text-red-600"></p>
+
+     <section id="result" aria-live="polite" 
+     class="fade-in hidden rounded bg-white p-4 shadow">
+      <div class="flex items-center justify-between">
+        <h2 id="word" class="text-2xl font-bold"></h2>
+        <button id="save-Btn" type="button" aria-label="Save word"
+            class="rounded border border-yellow-400 px-3 py-1 hover:bg-yellow-200">
+            Save
+        </button>
+        </div>
+
+        <p id="phonetic" class="text-slate-500"></p>
+        <button id="speak-btn" type="button" aria-label="listen to pronunciation"
+        class="mt-2 rounded bg-indigo-100 px-3 py-1 hover:bg-indigo-200">
+        Listen
+    </button>
+
+        <div id="meaning" class="mt-4"></div>
+        <p id="synonyms" class="mt-4"></p>
+
+        <p class="mt-2 text-sm">Source:
+            <a id="source-link" href="https://www.datamuse.com/api/" 
+            target="_blank" rel="noopener"
+            class="text-indigo-600 hover:underline">Datamuse API</a>
+        </p>
+     </section>
+
+     <section>
+        <h2 class="mb-2 mt-8 text-2xl font-bold">Saved words</h2>
+        <ul id="saved-list" class="flex flex-wrap gap-2"></ul>
+     </section>
+     </main>
+ <script src="index.js"></script>
+</body>
+</html>
+
+
+
+<
